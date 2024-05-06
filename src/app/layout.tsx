@@ -1,6 +1,11 @@
+import { Providers } from '@/styles/providers';
 import type { Metadata, Viewport } from 'next';
+import dynamic from 'next/dynamic';
+
+const Navbar = dynamic(() => import('@/components/layout/Navbar'));
+const NavbarBottom = dynamic(() => import('@/components/layout/NavbarBottom'));
+
 // import { Inter } from 'next/font/google';
-// import './globals.css';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -20,8 +25,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   colorScheme: 'light',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({
@@ -32,7 +37,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <Providers>
+          <main>
+            <Navbar />
+            {children}
+          </main>
+          <NavbarBottom />
+        </Providers>
       </body>
     </html>
   );
