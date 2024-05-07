@@ -18,8 +18,10 @@ export const theme = extendTheme({
       main: {
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
+        height: '100vh',
+        overflowY: 'auto',
         backgroundColor: foundations.colors.bg,
+        pb: '80px',
       },
     },
   },

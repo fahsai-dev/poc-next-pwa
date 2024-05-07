@@ -5,10 +5,6 @@ import dynamic from 'next/dynamic';
 const Navbar = dynamic(() => import('@/components/layout/Navbar'));
 const NavbarBottom = dynamic(() => import('@/components/layout/NavbarBottom'));
 
-// import { Inter } from 'next/font/google';
-
-// const inter = Inter({ subsets: ['latin'] });
-
 export const metadata: Metadata = {
   title: 'PWA',
   description: 'PWA Application',
