@@ -9,9 +9,7 @@ export default function CardPost({ title, time }: Props) {
   return (
     <Card w="full" p="16px">
       <Text variant={'subTitleMedium'}>Card Name</Text>
-      <Text as="span" variant={'paragraph'}>
-        {title}
-      </Text>
+      <Text variant={'normalMedium'}>{title}</Text>
     </Card>
   );
 }
